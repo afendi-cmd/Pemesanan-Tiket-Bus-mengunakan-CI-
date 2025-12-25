@@ -1,0 +1,1200 @@
+DEBUG - 2025-12-23 08:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 08:23:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 08:24:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 08:24:06 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_projek', 3306, '', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\UserModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Login.php(30): App\Models\UserModel->findUserByCredential('admin@gmail.com')
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Login->authenticate()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\UserModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Login.php(30): App\Models\UserModel->findUserByCredential('admin@gmail.com')
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Login->authenticate()
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#12 {main}
+CRITICAL - 2025-12-23 08:24:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login/authenticate]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `karyawan`
+WHERE `email` = :email:', [...], false)
+ 3 APPPATH\Models\UserModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Login.php(30): App\Models\UserModel->findUserByCredential('admin@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->authenticate()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-12-23 08:24:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 08:24:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 08:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-23 08:40:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_pemesanan.php"
+[Method: GET, Route: pemesanan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_pemesanan.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('form_pemesanan', [], true)
+ 3 APPPATH\Controllers\Pemesanan.php(26): view('form_pemesanan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pemesanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\public\\index.php')
+CRITICAL - 2025-12-23 08:40:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_pemesanan.php"
+[Method: GET, Route: pemesanan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_pemesanan.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('form_pemesanan', [], true)
+ 3 APPPATH\Controllers\Pemesanan.php(26): view('form_pemesanan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pemesanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\public\\index.php')
+CRITICAL - 2025-12-23 08:41:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_pemesanan.php"
+[Method: GET, Route: pemesanan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_pemesanan.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('form_pemesanan', [], true)
+ 3 APPPATH\Controllers\Pemesanan.php(26): view('form_pemesanan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pemesanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\public\\index.php')
+CRITICAL - 2025-12-23 08:41:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_pemesanan.php"
+[Method: GET, Route: pemesanan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_pemesanan.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('form_pemesanan', [], true)
+ 3 APPPATH\Controllers\Pemesanan.php(26): view('form_pemesanan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pemesanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-12-23 08:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 08:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 08:43:14 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 08:43:14 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(43): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(78): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+DEBUG - 2025-12-23 08:43:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 08:43:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 08:43:23 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 08:43:23 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(43): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(78): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+DEBUG - 2025-12-23 08:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 08:45:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 08:45:42 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 08:45:42 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(43): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(78): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+DEBUG - 2025-12-23 08:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 08:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 08:50:57 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 08:50:57 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(43): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(78): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+DEBUG - 2025-12-23 08:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 08:53:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 08:53:02 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 08:53:02 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(43): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(78): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+CRITICAL - 2025-12-23 08:53:02 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "view_tampil_pemesanan.php"
+[Method: GET, Route: pemesanan/tampil]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('view_tampil_pemesanan.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('view_tampil_pemesanan', [], true)
+ 3 APPPATH\Controllers\Pemesanan.php(95): view('view_tampil_pemesanan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pemesanan->tampil()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\public\\index.php')
+CRITICAL - 2025-12-23 08:54:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "view_tampil_pemesanan.php"
+[Method: GET, Route: pemesanan/tampil]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('view_tampil_pemesanan.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('view_tampil_pemesanan', [], true)
+ 3 APPPATH\Controllers\Pemesanan.php(95): view('view_tampil_pemesanan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pemesanan->tampil()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\public\\index.php')
+CRITICAL - 2025-12-23 08:55:07 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "view_tampil_pemesanan.php"
+[Method: GET, Route: pemesanan/tampil]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('view_tampil_pemesanan.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('view_tampil_pemesanan', [], true)
+ 3 APPPATH\Controllers\Pemesanan.php(95): view('view_tampil_pemesanan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pemesanan->tampil()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\public\\index.php')
+CRITICAL - 2025-12-23 08:55:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "view_tampil_pemesanan.php"
+[Method: GET, Route: pemesanan/tampil]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('view_tampil_pemesanan.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('view_tampil_pemesanan', [], true)
+ 3 APPPATH\Controllers\Pemesanan.php(95): view('view_tampil_pemesanan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pemesanan->tampil()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-12-23 08:55:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 08:55:11 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 08:55:11 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(43): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(78): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+CRITICAL - 2025-12-23 08:55:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "view_tampil_pemesanan.php"
+[Method: GET, Route: pemesanan/tampil]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('view_tampil_pemesanan.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('view_tampil_pemesanan', [], true)
+ 3 APPPATH\Controllers\Pemesanan.php(95): view('view_tampil_pemesanan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pemesanan->tampil()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-12-23 08:55:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 08:57:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 08:57:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 08:58:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 08:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 08:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 08:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 08:59:21 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 08:59:21 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(43): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(78): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+DEBUG - 2025-12-23 08:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 09:24:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 09:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-23 09:25:08 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\PemesananModel::getPemesananWithDetails
+[Method: GET, Route: laporanpemesanan]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Laporanpemesanan.php(12): CodeIgniter\Model->__call('getPemesananWithDetails', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LaporanPemesanan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanPemesanan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\public\\index.php')
+CRITICAL - 2025-12-23 09:25:15 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\PemesananModel::getPemesananWithDetails
+[Method: GET, Route: laporanpemesanan]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Laporanpemesanan.php(12): CodeIgniter\Model->__call('getPemesananWithDetails', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LaporanPemesanan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanPemesanan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-12-23 09:25:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 09:25:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 09:25:51 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 09:25:51 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(42): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(79): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+DEBUG - 2025-12-23 09:25:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:02:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:02:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 10:03:02 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 10:03:02 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(42): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(79): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+DEBUG - 2025-12-23 10:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:03:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:03:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 10:04:05 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 10:04:05 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(42): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(79): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+DEBUG - 2025-12-23 10:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:10:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 10:10:38 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 10:10:38 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(42): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(79): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+DEBUG - 2025-12-23 10:11:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:11:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 10:11:18 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 10:11:18 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(42): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(79): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+DEBUG - 2025-12-23 10:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 10:12:04 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 10:12:04 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(42): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(79): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+DEBUG - 2025-12-23 10:12:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:12:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 10:12:44 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 10:12:44 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(42): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(79): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+DEBUG - 2025-12-23 10:13:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:13:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 10:13:32 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 10:13:32 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(42): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(79): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+DEBUG - 2025-12-23 10:14:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 10:14:27 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 10:14:27 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(42): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(79): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+DEBUG - 2025-12-23 10:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:15:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:16:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 10:16:06 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 10:16:06 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(42): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(79): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+DEBUG - 2025-12-23 10:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:17:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:17:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:17:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:17:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:17:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 10:18:13 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 10:18:13 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(42): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(79): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+DEBUG - 2025-12-23 10:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:18:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:18:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 10:19:04 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 10:19:04 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(42): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(79): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+DEBUG - 2025-12-23 10:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-23 10:19:47 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\PemesananModel::getPemesananWithDetails
+[Method: GET, Route: laporanpemesanan]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Laporanpemesanan.php(12): CodeIgniter\Model->__call('getPemesananWithDetails', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LaporanPemesanan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanPemesanan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-12-23 10:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:19:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:20:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:20:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:20:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 10:20:57 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(69): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 10:20:57 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan_detail`, CONSTRAINT `pemesanan_detail_id_pemesanan_foreign` FOREIGN KEY (`id_pemesanan`) REFERENCES `pemesanan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Models\PemesananModel.php(42): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(79): App\Models\PemesananModel->simpanDetail(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+DEBUG - 2025-12-23 10:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-23 10:21:26 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\PemesananModel::getPemesananWithDetails
+[Method: GET, Route: laporanpemesanan]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Laporanpemesanan.php(12): CodeIgniter\Model->__call('getPemesananWithDetails', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LaporanPemesanan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanPemesanan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-12-23 10:21:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:21:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:25:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-23 10:25:15 --> ErrorException: Undefined variable $pemesanan
+[Method: GET, Route: pemesanan]
+in APPPATH\Views\Pemesanan\form_pemesanan.php on line 65.
+ 1 APPPATH\Views\Pemesanan\form_pemesanan.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pemesanan', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\app\\Views\\Pemesanan\\form_pemesanan.php', 65)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\app\\Views\\Pemesanan\\form_pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/pemesanan/form_pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(26): view('/pemesanan/form_pemesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pemesanan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-12-23 10:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-23 10:26:35 --> ErrorException: Undefined variable $pemesanans
+[Method: GET, Route: pemesanan]
+in APPPATH\Views\Pemesanan\form_pemesanan.php on line 65.
+ 1 APPPATH\Views\Pemesanan\form_pemesanan.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pemesanans', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\app\\Views\\Pemesanan\\form_pemesanan.php', 65)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\app\\Views\\Pemesanan\\form_pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/pemesanan/form_pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(26): view('/pemesanan/form_pemesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pemesanan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-12-23 10:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-23 10:26:51 --> ErrorException: Undefined variable $ms
+[Method: GET, Route: pemesanan]
+in APPPATH\Views\Pemesanan\form_pemesanan.php on line 65.
+ 1 APPPATH\Views\Pemesanan\form_pemesanan.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ms', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\app\\Views\\Pemesanan\\form_pemesanan.php', 65)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\app\\Views\\Pemesanan\\form_pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/pemesanan/form_pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(26): view('/pemesanan/form_pemesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pemesanan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-12-23 10:27:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:27:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 10:28:37 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(80): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 10:28:37 --> Gagal menyimpan data pemesanan. save=, insertID=0
+DEBUG - 2025-12-23 10:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:28:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 10:28:56 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_projek`.`pemesanan`, CONSTRAINT `pemesanan_id_penyewa_foreign` FOREIGN KEY (`id_penyewa`) REFERENCES `penyewa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\app\Controllers\Pemesanan.php(80): CodeIgniter\BaseModel->save(Array)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Pemesanan->simpan()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\TUGAS\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#16 {main}
+ERROR - 2025-12-23 10:28:56 --> Gagal menyimpan data pemesanan. save=, insertID=0
+DEBUG - 2025-12-23 10:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:30:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 10:30:27 --> Tidak ada session id_penyewa saat mencoba menyimpan pemesanan.
+DEBUG - 2025-12-23 10:30:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:30:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 10:30:44 --> Tidak ada session id_penyewa saat mencoba menyimpan pemesanan.
+DEBUG - 2025-12-23 10:30:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:31:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 10:32:08 --> Tidak ada session id_penyewa saat mencoba menyimpan pemesanan.
+DEBUG - 2025-12-23 10:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:34:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-23 10:34:19 --> Akses ke halaman pemesanan ditolak karena tidak ada session id_penyewa. Redirect ke login.
+DEBUG - 2025-12-23 10:34:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:34:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:34:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-23 10:34:37 --> Akses ke halaman pemesanan ditolak karena tidak ada session id_penyewa. Redirect ke login.
+DEBUG - 2025-12-23 10:34:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:34:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:34:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-23 10:34:50 --> Akses ke halaman pemesanan ditolak karena tidak ada session id_penyewa. Redirect ke login.
+DEBUG - 2025-12-23 10:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-23 10:36:38 --> Tidak ada session id_penyewa saat mencoba menyimpan pemesanan.
+DEBUG - 2025-12-23 10:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:37:29 --> Payload pemesanan: {"tanggal_pesan":"2025-12-23","id_penyewa":8,"id_paketbus":"4","total_bayar":1000000}
+DEBUG - 2025-12-23 10:37:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:38:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:39:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:39:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-23 10:42:02 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\PemesananModel::getPemesananWithDetails
+[Method: GET, Route: laporanpemesanan]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Laporanpemesanan.php(12): CodeIgniter\Model->__call('getPemesananWithDetails', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LaporanPemesanan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanPemesanan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\TUGAS\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-12-23 10:42:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:42:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:42:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:42:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:42:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:42:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:42:40 --> Payload pemesanan: {"tanggal_pesan":"2025-12-23","id_penyewa":2,"id_paketbus":"2","total_bayar":150000}
+DEBUG - 2025-12-23 10:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:44:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:47:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:47:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:47:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:48:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:49:44 --> Payload pemesanan: {"tanggal_pesan":"2025-12-23","id_penyewa":2,"id_paketbus":"2","total_bayar":150000}
+DEBUG - 2025-12-23 10:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:54:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:57:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:57:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:57:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:57:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:58:19 --> Payload pemesanan: {"tanggal_pesan":"2025-12-23","id_penyewa":3,"id_paketbus":"2","total_bayar":150000}
+DEBUG - 2025-12-23 10:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 10:59:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 11:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 11:01:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 11:01:10 --> Payload pemesanan: {"tanggal_pesan":"2025-12-23","id_penyewa":2,"id_paketbus":"2","total_bayar":150000}
+DEBUG - 2025-12-23 11:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 11:01:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 11:01:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 11:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 11:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 11:02:04 --> Payload pemesanan: {"tanggal_pesan":"2025-12-23","id_penyewa":3,"id_paketbus":"2","total_bayar":150000}
+DEBUG - 2025-12-23 11:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 11:02:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 11:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-23 11:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

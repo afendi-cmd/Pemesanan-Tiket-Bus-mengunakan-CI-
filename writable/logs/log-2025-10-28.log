@@ -1,0 +1,564 @@
+ERROR - 2025-10-28 09:50:41 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_projek', 3306, '', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\app\Controllers\Jabatan.php(19): CodeIgniter\BaseModel->findAll()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\app\Controllers\Jabatan.php(19): CodeIgniter\BaseModel->findAll()
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#13 {main}
+CRITICAL - 2025-10-28 09:50:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: jabatan]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `jabatan`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Jabatan.php(19): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jabatan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jabatan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-10-28 09:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-28 09:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-28 09:51:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-28 09:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-28 09:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-28 09:51:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-28 10:15:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-28 10:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-28 10:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-28 10:15:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-28 10:15:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-28 10:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-28 10:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-28 10:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-28 10:40:25 --> mysqli_sql_exception: Unknown column 'bus.merk' in 'field list' in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `paket_b...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `paket_b...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `paket_b...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `paket_b...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\app\Models\PaketBusModel.php(18): CodeIgniter\BaseModel->findAll()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\app\Controllers\PaketBus.php(14): App\Models\PaketBusModel->getPaketBusWithDetails()
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#15 {main}
+CRITICAL - 2025-10-28 10:40:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'bus.merk' in 'field list'
+[Method: GET, Route: paketbus]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merk`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id_paketwisata`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\PaketBusModel.php(18): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\PaketBus.php(14): App\Models\PaketBusModel->getPaketBusWithDetails()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+CRITICAL - 2025-10-28 10:40:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'bus.merk' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merk`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id_paketwisata`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merk`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id_paketwisata`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merk`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id_paketwisata`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\PaketBusModel.php(18): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\PaketBus.php(14): App\Models\PaketBusModel->getPaketBusWithDetails()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+CRITICAL - 2025-10-28 10:40:25 --> [Caused by] mysqli_sql_exception: Unknown column 'bus.merk' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merk`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id_paketwisata`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merk`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id_paketwisata`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merk`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id_paketwisata`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merk`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id_paketwisata`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\PaketBusModel.php(18): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\PaketBus.php(14): App\Models\PaketBusModel->getPaketBusWithDetails()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+ERROR - 2025-10-28 10:43:33 --> mysqli_sql_exception: Unknown column 'paket__bus.id_paketwisata' in 'on clause' in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `paket_b...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `paket_b...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `paket_b...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `paket_b...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\app\Models\PaketBusModel.php(18): CodeIgniter\BaseModel->findAll()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\app\Controllers\PaketBus.php(14): App\Models\PaketBusModel->getPaketBusWithDetails()
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#15 {main}
+CRITICAL - 2025-10-28 10:43:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'paket__bus.id_paketwisata' in 'on clause'
+[Method: GET, Route: paketbus]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merek`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id_paketwisata`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\PaketBusModel.php(18): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\PaketBus.php(14): App\Models\PaketBusModel->getPaketBusWithDetails()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+CRITICAL - 2025-10-28 10:43:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'paket__bus.id_paketwisata' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merek`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id_paketwisata`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merek`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id_paketwisata`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merek`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id_paketwisata`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\PaketBusModel.php(18): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\PaketBus.php(14): App\Models\PaketBusModel->getPaketBusWithDetails()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+CRITICAL - 2025-10-28 10:43:33 --> [Caused by] mysqli_sql_exception: Unknown column 'paket__bus.id_paketwisata' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merek`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id_paketwisata`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merek`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id_paketwisata`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merek`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id_paketwisata`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merek`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id_paketwisata`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\PaketBusModel.php(18): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\PaketBus.php(14): App\Models\PaketBusModel->getPaketBusWithDetails()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+ERROR - 2025-10-28 10:45:05 --> mysqli_sql_exception: Unknown column 'paket__bus.id' in 'on clause' in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `paket_b...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `paket_b...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `paket_b...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `paket_b...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\app\Models\PaketBusModel.php(18): CodeIgniter\BaseModel->findAll()
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\app\Controllers\PaketBus.php(14): App\Models\PaketBusModel->getPaketBusWithDetails()
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\PRTIKUM KE 2\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#15 {main}
+CRITICAL - 2025-10-28 10:45:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'paket__bus.id' in 'on clause'
+[Method: GET, Route: paketbus]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merek`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\PaketBusModel.php(18): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\PaketBus.php(14): App\Models\PaketBusModel->getPaketBusWithDetails()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+CRITICAL - 2025-10-28 10:45:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'paket__bus.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merek`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merek`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merek`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\PaketBusModel.php(18): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\PaketBus.php(14): App\Models\PaketBusModel->getPaketBusWithDetails()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+CRITICAL - 2025-10-28 10:45:05 --> [Caused by] mysqli_sql_exception: Unknown column 'paket__bus.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merek`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merek`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merek`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `paket_bus`.*, `paket_wisata`.`nama_paket`, `bus`.`nomor_polisi`, `bus`.`merek`
+FROM `paket_bus`
+LEFT JOIN `paket_wisata` ON `paket_wisata`.`id` = `paket__bus`.`id`
+LEFT JOIN `bus` ON `bus`.`id` = `paket_bus`.`id_bus`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\PaketBusModel.php(18): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\PaketBus.php(14): App\Models\PaketBusModel->getPaketBusWithDetails()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-10-28 10:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-28 10:47:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-28 10:48:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-28 10:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-28 10:49:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-28 10:51:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-28 10:51:10 --> ErrorException: Undefined variable $paketwisata
+[Method: GET, Route: paketbus]
+in APPPATH\Views\paketbus\index.php on line 68.
+ 1 APPPATH\Views\paketbus\index.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paketwisata', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php', 68)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('paketbus/index', [], true)
+ 5 APPPATH\Controllers\PaketBus.php(15): view('paketbus/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-10-28 10:54:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-28 10:54:55 --> ErrorException: Undefined variable $paketwisata
+[Method: GET, Route: paketbus]
+in APPPATH\Views\paketbus\index.php on line 66.
+ 1 APPPATH\Views\paketbus\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paketwisata', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('paketbus/index', [], true)
+ 5 APPPATH\Controllers\PaketBus.php(15): view('paketbus/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-10-28 10:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-28 10:55:48 --> ErrorException: Undefined variable $paketwisata
+[Method: GET, Route: paketbus]
+in APPPATH\Views\paketbus\index.php on line 66.
+ 1 APPPATH\Views\paketbus\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paketwisata', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('paketbus/index', [], true)
+ 5 APPPATH\Controllers\PaketBus.php(15): view('paketbus/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-10-28 10:55:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-28 10:55:49 --> ErrorException: Undefined variable $paketwisata
+[Method: GET, Route: paketbus]
+in APPPATH\Views\paketbus\index.php on line 66.
+ 1 APPPATH\Views\paketbus\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paketwisata', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('paketbus/index', [], true)
+ 5 APPPATH\Controllers\PaketBus.php(15): view('paketbus/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-10-28 10:58:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-28 10:58:07 --> ErrorException: Undefined variable $paketwisata
+[Method: GET, Route: paketbus]
+in APPPATH\Views\paketbus\index.php on line 66.
+ 1 APPPATH\Views\paketbus\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paketwisata', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('paketbus/index', [], true)
+ 5 APPPATH\Controllers\PaketBus.php(15): view('paketbus/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-10-28 10:58:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-28 10:58:08 --> ErrorException: Undefined variable $paketwisata
+[Method: GET, Route: paketbus]
+in APPPATH\Views\paketbus\index.php on line 66.
+ 1 APPPATH\Views\paketbus\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paketwisata', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('paketbus/index', [], true)
+ 5 APPPATH\Controllers\PaketBus.php(15): view('paketbus/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-10-28 10:58:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-28 10:58:08 --> ErrorException: Undefined variable $paketwisata
+[Method: GET, Route: paketbus]
+in APPPATH\Views\paketbus\index.php on line 66.
+ 1 APPPATH\Views\paketbus\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paketwisata', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('paketbus/index', [], true)
+ 5 APPPATH\Controllers\PaketBus.php(15): view('paketbus/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-10-28 10:58:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-28 10:58:09 --> ErrorException: Undefined variable $paketwisata
+[Method: GET, Route: paketbus]
+in APPPATH\Views\paketbus\index.php on line 66.
+ 1 APPPATH\Views\paketbus\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paketwisata', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('paketbus/index', [], true)
+ 5 APPPATH\Controllers\PaketBus.php(15): view('paketbus/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-10-28 11:03:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-28 11:03:34 --> ErrorException: Undefined variable $paketwisata
+[Method: GET, Route: paketbus]
+in APPPATH\Views\paketbus\index.php on line 66.
+ 1 APPPATH\Views\paketbus\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paketwisata', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('paketbus/index', [], true)
+ 5 APPPATH\Controllers\PaketBus.php(15): view('paketbus/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-10-28 11:04:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-28 11:04:28 --> ErrorException: Undefined variable $paketwisata
+[Method: GET, Route: paketbus]
+in APPPATH\Views\paketbus\index.php on line 66.
+ 1 APPPATH\Views\paketbus\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paketwisata', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('paketbus/index', [], true)
+ 5 APPPATH\Controllers\PaketBus.php(15): view('paketbus/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-10-28 11:05:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-28 11:05:36 --> ErrorException: Undefined variable $paket
+[Method: GET, Route: paketbus]
+in APPPATH\Views\paketbus\index.php on line 66.
+ 1 APPPATH\Views\paketbus\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paket', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('paketbus/index', [], true)
+ 5 APPPATH\Controllers\PaketBus.php(15): view('paketbus/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-10-28 11:11:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-28 11:11:09 --> ErrorException: Undefined variable $paket
+[Method: GET, Route: paketbus]
+in APPPATH\Views\paketbus\index.php on line 66.
+ 1 APPPATH\Views\paketbus\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paket', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('paketbus/index', [], true)
+ 5 APPPATH\Controllers\PaketBus.php(22): view('paketbus/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-10-28 11:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-28 11:11:10 --> ErrorException: Undefined variable $paket
+[Method: GET, Route: paketbus]
+in APPPATH\Views\paketbus\index.php on line 66.
+ 1 APPPATH\Views\paketbus\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paket', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('paketbus/index', [], true)
+ 5 APPPATH\Controllers\PaketBus.php(22): view('paketbus/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')
+DEBUG - 2025-10-28 11:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-28 11:11:45 --> ErrorException: Undefined variable $paketwisata
+[Method: GET, Route: paketbus]
+in APPPATH\Views\paketbus\index.php on line 66.
+ 1 APPPATH\Views\paketbus\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paketwisata', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\app\\Views\\paketbus\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('paketbus/index', [], true)
+ 5 APPPATH\Controllers\PaketBus.php(22): view('paketbus/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaketBus->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaketBus))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\PRTIKUM KE 2\\public\\index.php')

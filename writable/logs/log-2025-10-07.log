@@ -1,0 +1,242 @@
+ERROR - 2025-10-07 08:38:20 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dbsppd', 3306, '', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\app\Controllers\sppd.php(43): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(933): App\Controllers\sppd->tampil()
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sppd))
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\app\Controllers\sppd.php(43): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(933): App\Controllers\sppd->tampil()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sppd))
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#11 {main}
+CRITICAL - 2025-10-07 08:38:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: sppd/tampil]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tabelsppd`', [], false)
+ 3 APPPATH\Controllers\sppd.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\sppd->tampil()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sppd))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\public\\index.php')
+ERROR - 2025-10-07 08:38:32 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dbsppd', 3306, '', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\app\Controllers\sppd.php(43): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(933): App\Controllers\sppd->tampil()
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sppd))
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\app\Controllers\sppd.php(43): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(933): App\Controllers\sppd->tampil()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sppd))
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#11 {main}
+CRITICAL - 2025-10-07 08:38:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: sppd/tampil]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tabelsppd`', [], false)
+ 3 APPPATH\Controllers\sppd.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\sppd->tampil()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sppd))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\public\\index.php')
+ERROR - 2025-10-07 08:38:49 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dbsppd', 3306, '', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\app\Controllers\sppd.php(26): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(933): App\Controllers\sppd->simpan()
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sppd))
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\app\Controllers\sppd.php(26): CodeIgniter\Database\BaseBuilder->insert(Array)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(933): App\Controllers\sppd->simpan()
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sppd))
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#11 {main}
+CRITICAL - 2025-10-07 08:38:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: sppd/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tabelsppd` (`kode`, `agenda`, `btrabsportasi`, `bpenginapan`, `bpokok`, `total`) VALUES (:kode:, :agenda:, :btrabsportasi:, :bpenginapan:, :bpokok:, :total:)', [...], false)
+ 3 APPPATH\Controllers\sppd.php(26): CodeIgniter\Database\BaseBuilder->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\sppd->simpan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sppd))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\public\\index.php')
+ERROR - 2025-10-07 10:31:59 --> mysqli_sql_exception: Table 'dbsppd.dbpenginapan' doesn't exist in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `db...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `db...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `db...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\app\Controllers\Kamar.php(28): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(933): App\Controllers\Kamar->simpan()
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kamar))
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#12 {main}
+CRITICAL - 2025-10-07 10:31:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'dbsppd.dbpenginapan' doesn't exist
+[Method: POST, Route: Kamar/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `dbpenginapan` (`id`, `Kodekamar`, `Namakamar`, `harga`, `tglcekin`, `tglcekout`, `lama`, `total`) VALUES (:id:, :Kodekamar:, :Namakamar:, :harga:, :tglcekin:, :tglcekout:, :lama:, :total:)', [...], false)
+ 2 APPPATH\Controllers\Kamar.php(28): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kamar->simpan()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kamar))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\public\\index.php')
+CRITICAL - 2025-10-07 10:31:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'dbsppd.dbpenginapan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `dbpenginapan` (`id`, `Kodekamar`, `Namakamar`, `harga`, `tglcekin`, `tglcekout`, `lama`, `total`) VALUES (\'K001\', \'K001\', \'Mawar\', \'150000\', NULL, NULL, \'1\', \'150000\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `dbpenginapan` (`id`, `Kodekamar`, `Namakamar`, `harga`, `tglcekin`, `tglcekout`, `lama`, `total`) VALUES (\'K001\', \'K001\', \'Mawar\', \'150000\', NULL, NULL, \'1\', \'150000\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `dbpenginapan` (`id`, `Kodekamar`, `Namakamar`, `harga`, `tglcekin`, `tglcekout`, `lama`, `total`) VALUES (:id:, :Kodekamar:, :Namakamar:, :harga:, :tglcekin:, :tglcekout:, :lama:, :total:)', [...], false)
+ 4 APPPATH\Controllers\Kamar.php(28): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kamar->simpan()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kamar))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\public\\index.php')
+CRITICAL - 2025-10-07 10:31:59 --> [Caused by] mysqli_sql_exception: Table 'dbsppd.dbpenginapan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `dbpenginapan` (`id`, `Kodekamar`, `Namakamar`, `harga`, `tglcekin`, `tglcekout`, `lama`, `total`) VALUES (\'K001\', \'K001\', \'Mawar\', \'150000\', NULL, NULL, \'1\', \'150000\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `dbpenginapan` (`id`, `Kodekamar`, `Namakamar`, `harga`, `tglcekin`, `tglcekout`, `lama`, `total`) VALUES (\'K001\', \'K001\', \'Mawar\', \'150000\', NULL, NULL, \'1\', \'150000\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `dbpenginapan` (`id`, `Kodekamar`, `Namakamar`, `harga`, `tglcekin`, `tglcekout`, `lama`, `total`) VALUES (\'K001\', \'K001\', \'Mawar\', \'150000\', NULL, NULL, \'1\', \'150000\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `dbpenginapan` (`id`, `Kodekamar`, `Namakamar`, `harga`, `tglcekin`, `tglcekout`, `lama`, `total`) VALUES (:id:, :Kodekamar:, :Namakamar:, :harga:, :tglcekin:, :tglcekout:, :lama:, :total:)', [...], false)
+ 5 APPPATH\Controllers\Kamar.php(28): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kamar->simpan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kamar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\public\\index.php')
+CRITICAL - 2025-10-07 10:41:28 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "kamar.php"
+[Method: GET, Route: Kamar/laporan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('kamar.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('kamar', [], true)
+ 3 APPPATH\Controllers\Kamar.php(47): view('kamar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kamar->tampil()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kamar))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\public\\index.php')
+CRITICAL - 2025-10-07 10:56:05 --> ErrorException: Undefined property: stdClass::$tglcekin
+[Method: GET, Route: Kamar/laporan]
+in APPPATH\Views\tampilkamar.php on line 89.
+ 1 APPPATH\Views\tampilkamar.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tglcekin', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\app\\Views\\tampilkamar.php', 89)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\app\\Views\\tampilkamar.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('tampilkamar', [], true)
+ 5 APPPATH\Controllers\Kamar.php(47): view('tampilkamar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kamar->tampil()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kamar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\public\\index.php')
+CRITICAL - 2025-10-07 11:16:50 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: kamar/laporan]
+in APPPATH\Controllers\Kamar.php on line 51.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\app\\Controllers\\Kamar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Kamar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Kamar')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Kamar', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\public\\index.php')
+CRITICAL - 2025-10-07 11:17:29 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "laporankamar.php"
+[Method: GET, Route: kamar/laporan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('laporankamar.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('laporankamar', [], true)
+ 3 APPPATH\Controllers\Kamar.php(56): view('laporankamar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kamar->laporan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kamar))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\public\\index.php')

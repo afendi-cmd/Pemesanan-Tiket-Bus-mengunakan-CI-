@@ -1,0 +1,96 @@
+CRITICAL - 2025-10-14 02:43:37 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 16384 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\Main.php on line 93.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 02:43:59 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 16384 bytes)
+[Method: GET, Route: biodata]
+in APPPATH\Views\layout\Main.php on line 93.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 02:44:20 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 262144 bytes)
+[Method: GET, Route: biodata]
+in SYSTEMPATH\HTTP\URI.php on line 1068.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 02:45:39 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 32768 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\Main.php on line 1.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 02:46:48 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 32768 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\Main.php on line 1.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 02:47:16 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 32768 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\Main.php on line 1.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 02:47:52 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 24576 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\Main.php on line 223.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 02:48:27 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 24576 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\Main.php on line 223.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 02:48:53 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 24576 bytes)
+[Method: GET, Route: biodata]
+in APPPATH\Views\layout\Main.php on line 223.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 02:50:20 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 49152 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\Main.php on line 223.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 02:50:51 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 49152 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\Main.php on line 223.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 02:51:26 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 49152 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\Main.php on line 223.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 02:52:05 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 49152 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\Main.php on line 223.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 02:52:36 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 49152 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\Main.php on line 223.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 02:53:06 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 49152 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\Main.php on line 223.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 02:54:01 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 49152 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\main.php on line 223.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 03:30:43 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 32768 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\main.php on line 1.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 03:31:15 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 32768 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\main.php on line 1.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 03:31:35 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 32768 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\main.php on line 1.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 03:31:57 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 32768 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\main.php on line 1.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 03:32:19 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 32768 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\main.php on line 1.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 03:33:11 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 32768 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\main.php on line 1.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 03:43:51 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 32768 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\main.php on line 1.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-14 03:44:45 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 32768 bytes)
+[Method: GET, Route: layout]
+in APPPATH\Views\layout\main.php on line 1.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

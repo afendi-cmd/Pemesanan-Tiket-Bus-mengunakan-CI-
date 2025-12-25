@@ -1,0 +1,84 @@
+ERROR - 2025-09-30 11:17:03 --> mysqli_sql_exception: Unknown column 'btransportasi' in 'field list' in D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ta...', 0)
+#1 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ta...')
+#2 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ta...')
+#3 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#4 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\app\Controllers\sppd.php(26): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(933): App\Controllers\sppd->simpan()
+#6 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sppd))
+#7 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\RONAL\KULIAH\SEMESTER 5\WEB 2\Pratikum1\system\rewrite.php(44): require_once('D:\\RONAL\\KULIAH...')
+#12 {main}
+CRITICAL - 2025-09-30 11:17:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'btransportasi' in 'field list'
+[Method: POST, Route: sppd/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tabelsppd` (`kode`, `agenda`, `btransportasi`, `bpenginapan`, `bpokok`, `total`) VALUES (:kode:, :agenda:, :btransportasi:, :bpenginapan:, :bpokok:, :total:)', [...], false)
+ 2 APPPATH\Controllers\sppd.php(26): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\sppd->simpan()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sppd))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\public\\index.php')
+CRITICAL - 2025-09-30 11:17:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'btransportasi' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tabelsppd` (`kode`, `agenda`, `btransportasi`, `bpenginapan`, `bpokok`, `total`) VALUES (\'K001\', \'Rapat\', \'100\', \'20\', \'30\', \'150\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tabelsppd` (`kode`, `agenda`, `btransportasi`, `bpenginapan`, `bpokok`, `total`) VALUES (\'K001\', \'Rapat\', \'100\', \'20\', \'30\', \'150\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tabelsppd` (`kode`, `agenda`, `btransportasi`, `bpenginapan`, `bpokok`, `total`) VALUES (:kode:, :agenda:, :btransportasi:, :bpenginapan:, :bpokok:, :total:)', [...], false)
+ 4 APPPATH\Controllers\sppd.php(26): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\sppd->simpan()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sppd))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\public\\index.php')
+CRITICAL - 2025-09-30 11:17:03 --> [Caused by] mysqli_sql_exception: Unknown column 'btransportasi' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `tabelsppd` (`kode`, `agenda`, `btransportasi`, `bpenginapan`, `bpokok`, `total`) VALUES (\'K001\', \'Rapat\', \'100\', \'20\', \'30\', \'150\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tabelsppd` (`kode`, `agenda`, `btransportasi`, `bpenginapan`, `bpokok`, `total`) VALUES (\'K001\', \'Rapat\', \'100\', \'20\', \'30\', \'150\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tabelsppd` (`kode`, `agenda`, `btransportasi`, `bpenginapan`, `bpokok`, `total`) VALUES (\'K001\', \'Rapat\', \'100\', \'20\', \'30\', \'150\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tabelsppd` (`kode`, `agenda`, `btransportasi`, `bpenginapan`, `bpokok`, `total`) VALUES (:kode:, :agenda:, :btransportasi:, :bpenginapan:, :bpokok:, :total:)', [...], false)
+ 5 APPPATH\Controllers\sppd.php(26): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\sppd->simpan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sppd))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\public\\index.php')
+CRITICAL - 2025-09-30 11:20:36 --> ErrorException: Undefined property: stdClass::$transportasi
+[Method: GET, Route: sppd/tampil]
+in APPPATH\Views\tampilsppd.php on line 19.
+ 1 APPPATH\Views\tampilsppd.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$transportasi', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\app\\Views\\tampilsppd.php', 19)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\app\\Views\\tampilsppd.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('tampilsppd', [], true)
+ 5 APPPATH\Controllers\sppd.php(45): view('tampilsppd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\sppd->tampil()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sppd))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\public\\index.php')
+CRITICAL - 2025-09-30 11:21:15 --> ErrorException: Undefined property: stdClass::$penginapan
+[Method: GET, Route: sppd/tampil]
+in APPPATH\Views\tampilsppd.php on line 20.
+ 1 APPPATH\Views\tampilsppd.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$penginapan', 'D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\app\\Views\\tampilsppd.php', 20)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\app\\Views\\tampilsppd.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('tampilsppd', [], true)
+ 5 APPPATH\Controllers\sppd.php(45): view('tampilsppd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\sppd->tampil()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sppd))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\RONAL\\KULIAH\\SEMESTER 5\\WEB 2\\Pratikum1\\public\\index.php')
