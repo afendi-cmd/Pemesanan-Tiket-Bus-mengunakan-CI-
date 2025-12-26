@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Informasi Pemesanan Tiket - Premium</title>
     <!-- Load Tailwind CSS CDN -->
+     <link rel="stylesheet" href="<?= base_url('css/output.css') ?>">
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Load Icon library (mdi) -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
@@ -178,7 +179,7 @@
                         <?=$this->rendersection('menu') ?>
                         <!-- END OF PHP MENU SECTION -->
 
-                    </ul>"
+                    </ul>
                 </div>
                 
             </div>
@@ -307,6 +308,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Custom JavaScript for Menu and Dropdown Toggling -->
+       <!-- Custom JavaScript for Menu and Dropdown Toggling -->
     <script>
         $(document).ready(function() {
             const $wrapper = $('#wrapper');
@@ -346,7 +348,33 @@
             // Toggle Sidebar Logic
             function toggleSidebar() {
                 $wrapper.toggleClass('enlarged');
+                
+                // Simpan status sidebar ke localStorage
+                localStorage.setItem('sidebarState', $wrapper.hasClass('enlarged') ? 'collapsed' : 'open');
+                
                 adjustLayout();
+            }
+
+            // Periksa localStorage saat halaman dimuat
+                       // Periksa localStorage saat halaman dimuat
+            function initSidebarState() {
+                const sidebarState = localStorage.getItem('sidebarState');
+                if (sidebarState === 'collapsed') {
+                    $wrapper.addClass('enlarged');
+                }
+                adjustLayout();
+
+                // --- Tambahkan kode ini untuk mengembalikan posisi scroll ---
+                const savedScrollTop = localStorage.getItem('sidebarScrollTop');
+                if (savedScrollTop) {
+                    // Gunakan setTimeout kecil untuk memastikan sidebar sudah ter-render dengan benar
+                    setTimeout(() => {
+                        const sidebarScrollElement = document.querySelector('.sidebar-scroll');
+                        if (sidebarScrollElement) {
+                            sidebarScrollElement.scrollTop = parseInt(savedScrollTop, 10);
+                        }
+                    }, 100); // 100ms delay biasanya cukup
+                }
             }
 
             // Desktop Toggle (Hamburger Menu)
@@ -360,6 +388,7 @@
                 e.preventDefault();
                 // On mobile, removing 'enlarged' means hiding the sidebar
                 $wrapper.removeClass('enlarged');
+                localStorage.setItem('sidebarState', 'open');
                 adjustLayout();
             });
 
@@ -369,6 +398,7 @@
                     // Check if the click is outside the sidebar AND not on the toggle button itself
                     if (!$sidebar.is(e.target) && $sidebar.has(e.target).length === 0 && !$toggleTrigger.is(e.target) && $toggleTrigger.has(e.target).length === 0) {
                         $wrapper.removeClass('enlarged');
+                        localStorage.setItem('sidebarState', 'open');
                         adjustLayout();
                     }
                 }
@@ -405,7 +435,10 @@
             // Initial setup and resize handling
             $(window).on('resize', function() {
                 adjustLayout();
-            }).trigger('resize'); // Trigger resize on load for initial positioning
+            });
+            
+            // Inisialisasi status sidebar saat halaman dimuat
+            initSidebarState();
         });
     </script>
 
