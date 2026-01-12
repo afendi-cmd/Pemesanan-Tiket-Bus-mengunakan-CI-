@@ -43,9 +43,11 @@ class PemesananDetail extends BaseController
 
         if ($id) {
             $this->detailModel->update($id, $data);
+            log_update('Pemesanan Detail', $id);
             session()->setFlashdata('success', 'Data berhasil diperbarui.');
         } else {
-            $this->detailModel->insert($data);
+            $insertId = $this->detailModel->insert($data);
+            log_create('Pemesanan Detail', $insertId);
             session()->setFlashdata('success', 'Data berhasil ditambahkan.');
         }
 
@@ -54,6 +56,7 @@ class PemesananDetail extends BaseController
 
     public function delete($id)
     {
+        log_delete('Pemesanan Detail', $id);
         $this->detailModel->delete($id);
         session()->setFlashdata('success', 'Data berhasil dihapus.');
         return redirect()->to('/pemesanan_detail');

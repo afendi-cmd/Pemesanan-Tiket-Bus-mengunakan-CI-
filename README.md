@@ -1,60 +1,316 @@
-# CodeIgniter 4 Framework
+# 🚌 Bus Rental Management System with User Logs
 
-## What is CodeIgniter?
+Sistem manajemen rental bus dengan fitur logging aktivitas user yang komprehensif, dibangun menggunakan CodeIgniter 4.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## ✨ Features
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+### 🎯 Core Features
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+- **Bus Management**: Kelola armada bus dan jenis bus
+- **Employee Management**: Manajemen karyawan dan jabatan
+- **Customer Management**: Registrasi dan manajemen penyewa
+- **Package Management**: Paket wisata dan paket bus
+- **Booking System**: Sistem pemesanan dengan validasi ketersediaan
+- **Payment System**: Manajemen pembayaran dan bukti transfer
+- **Departure Management**: Penjadwalan keberangkatan
+- **Reporting**: Laporan lengkap untuk semua modul
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+### 📊 User Logs System (NEW!)
 
-## Important Change with index.php
+- **Complete Activity Tracking**: Semua aktivitas user tercatat otomatis
+- **Login/Logout Monitoring**: Tracking autentikasi dengan email & nama
+- **CRUD Auto-Logging**: Logging otomatis untuk semua operasi create/update/delete
+- **User Identification**: Tracking berdasarkan ID, email, dan nama lengkap
+- **Security Monitoring**: IP address dan informasi browser
+- **Admin Dashboard**: Interface real-time untuk monitoring logs
+- **Advanced Filtering**: Filter logs berdasarkan aktivitas dan user
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+## 🛠️ Tech Stack
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+- **Framework**: CodeIgniter 4.6.3
+- **Database**: MySQL/MariaDB
+- **Frontend**: Bootstrap 5, JavaScript (AJAX)
+- **PHP Version**: 8.0+
+- **Web Server**: Apache/Nginx
 
-**Please** read the user guide for a better explanation of how CI4 works!
+## 📋 Requirements
 
-## Repository Management
+- PHP 8.0 atau lebih tinggi
+- MySQL 5.7+ atau MariaDB 10.3+
+- Apache/Nginx web server
+- Composer
+- Git
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+## 🚀 Installation
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+### 1. Clone Repository
 
-## Contributing
+```bash
+git clone https://github.com/yourusername/bus-rental-system.git
+cd bus-rental-system
+```
 
-We welcome contributions from the community.
+### 2. Install Dependencies
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
+```bash
+composer install
+npm install
+```
 
-## Server Requirements
+### 3. Environment Setup
 
-PHP version 8.1 or higher is required, with the following extensions installed:
+```bash
+# Copy environment file
+cp .env.example .env
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+# Edit database configuration
+nano .env
+```
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
+Configure your database settings:
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+```env
+database.default.hostname = localhost
+database.default.database = db_projek
+database.default.username = your_username
+database.default.password = your_password
+database.default.DBDriver = MySQLi
+```
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+### 4. Database Setup
+
+```bash
+# Import database
+mysql -u username -p db_projek < db_projek.sql
+
+# Or run migrations
+php spark migrate
+```
+
+### 5. Set Permissions
+
+```bash
+chmod -R 755 writable/
+chmod -R 755 public/
+```
+
+### 6. Start Development Server
+
+```bash
+php spark serve
+```
+
+Visit: `http://localhost:8080`
+
+## 📊 Database Structure
+
+### Core Tables
+
+- `jabatan` - Job positions
+- `karyawan` - Employees
+- `penyewa` - Customers
+- `jenisbus` - Bus types
+- `bus` - Bus fleet
+- `paket_wisata` - Tour packages
+- `paket_bus` - Bus packages
+- `pemesanan` - Bookings
+- `pemesanan_detail` - Booking details
+- `pembayaran` - Payments
+- `pemberangkatan` - Departures
+
+### User Logs Table (NEW!)
+
+```sql
+CREATE TABLE `user_logs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `user_name` varchar(255) DEFAULT NULL,
+  `activity` varchar(255) NOT NULL,
+  `description` text,
+  `ip_address` varchar(45),
+  `user_agent` varchar(255),
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+);
+```
+
+## 🎯 User Logs System Usage
+
+### Automatic Logging
+
+Sistem secara otomatis mencatat:
+
+- ✅ Login/Logout activities
+- ✅ All CRUD operations (Create, Update, Delete)
+- ✅ User information (ID, email, name)
+- ✅ Security data (IP address, browser)
+
+### Manual Logging
+
+```php
+// Basic logging
+save_log('CUSTOM_ACTION', 'Description of action');
+
+// CRUD logging
+log_create('ModuleName', $recordId);
+log_update('ModuleName', $recordId);
+log_delete('ModuleName', $recordId);
+
+// With specific user info
+save_log('ACTION', 'Description', $userId, $email, $userName);
+```
+
+### View Logs
+
+- **Admin Dashboard**: `/userlogs` - View all system logs
+- **User Logs**: `/userlogs/my` - View personal activity logs
+- **API Endpoint**: `/userlogs/getLogs` - AJAX endpoint for filtering
+
+## 🔐 Default Login Credentials
+
+### Admin (Karyawan)
+
+- **Email**: admin@gmail.com
+- **Password**: admin123
+
+### Customer (Penyewa)
+
+- **Email**: penyewa@gmail.com
+- **Password**: penyewa123
+
+## 📱 Screenshots
+
+### Dashboard
+
+![Dashboard](public/images/dashboard.png)
+
+### User Logs Admin View
+
+![User Logs](public/images/user-logs.png)
+
+### Bus Management
+
+![Bus Management](public/images/bus-management.png)
+
+## 🧪 Testing
+
+### Test User Logs System
+
+```bash
+# Test basic logging
+http://localhost:8080/testlog
+
+# Test login logging
+http://localhost:8080/testlogin
+
+# Test username functionality
+http://localhost:8080/testusername
+
+# Add database column (if needed)
+http://localhost:8080/addcolumn
+```
+
+### Run Unit Tests
+
+```bash
+php spark test
+```
+
+## 📚 Documentation
+
+- [User Logs Documentation](USER_LOGS_DOCUMENTATION.md)
+- [Email Logging Update](EMAIL_LOGGING_UPDATE.md)
+- [User Name Logging Update](USER_NAME_LOGGING_UPDATE.md)
+- [Implementation Summary](LOGGING_IMPLEMENTATION_SUMMARY.md)
+- [GitHub Update Guide](GITHUB_UPDATE_GUIDE.md)
+
+## 🔧 Development
+
+### Adding Logging to New Controllers
+
+```php
+// 1. Add to controller method
+public function save() {
+    // Your existing code...
+
+    if ($id) {
+        $this->model->update($id, $data);
+        log_update('ModuleName', $id);
+    } else {
+        $insertId = $this->model->insert($data);
+        log_create('ModuleName', $insertId);
+    }
+}
+
+public function delete($id) {
+    log_delete('ModuleName', $id);
+    $this->model->delete($id);
+}
+```
+
+### Helper Functions Available
+
+- `save_log($activity, $description, $userId, $email, $userName)`
+- `log_create($module, $recordId, $userId)`
+- `log_update($module, $recordId, $userId)`
+- `log_delete($module, $recordId, $userId)`
+- `get_user_email($userId)`
+- `get_user_name($userId)`
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👥 Authors
+
+- **Ronal Afendi** - _Initial work_ - [YourGitHub](https://github.com/yourusername)
+
+## 🙏 Acknowledgments
+
+- CodeIgniter 4 Framework
+- Bootstrap 5 for UI components
+- Font Awesome for icons
+- Contributors and testers
+
+## 📞 Support
+
+If you have any questions or need help, please:
+
+- Open an issue on GitHub
+- Contact: mronal.afendi04@gmail.com
+
+---
+
+## 🎉 Recent Updates
+
+### v2.0.0 - User Logs System
+
+- ✨ Complete user activity logging system
+- 📊 Real-time monitoring dashboard
+- 🔐 Login/logout tracking with user identification
+- 📝 Auto-logging for all CRUD operations
+- 🎯 Admin interface with filtering and AJAX
+- 🧪 Comprehensive testing suite
+- 📚 Full documentation and guides
+
+### v1.0.0 - Initial Release
+
+- 🚌 Complete bus rental management system
+- 👥 User management (employees & customers)
+- 📦 Package and booking system
+- 💰 Payment processing
+- 📊 Comprehensive reporting
+- 🎨 Responsive UI with Bootstrap
+
+---
+
+**⭐ If you find this project helpful, please give it a star!**

@@ -139,6 +139,19 @@ function edit(id) {
             new bootstrap.Modal(document.getElementById('modalForm')).show();
         });
 }
+
+
+// Prefill and open modal when redirected from pemesanan/input
+<?php $prefill = session()->getFlashdata('prefill_pemesanan'); ?>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var pre = '<?= esc($prefill) ?>';
+        if (pre) {
+            // set the selected pemesanan and open modal
+            document.getElementById('idpemesanan').value = pre;
+            new bootstrap.Modal(document.getElementById('modalForm')).show();
+        }
+    });
 </script>
 
 <?= $this->endSection() ?>

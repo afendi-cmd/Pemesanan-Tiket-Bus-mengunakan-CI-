@@ -56,11 +56,13 @@ class Karyawan extends BaseController
     // Jika update
     if ($id) {
         $this->karyawanModel->update($id, $data);
+        log_update('Karyawan', $id);
         session()->setFlashdata('success', 'Data karyawan berhasil diperbarui.');
     } 
     // Jika insert baru
     else {
-        $this->karyawanModel->insert($data);
+        $insertId = $this->karyawanModel->insert($data);
+        log_create('Karyawan', $insertId);
         session()->setFlashdata('success', 'Data karyawan berhasil ditambahkan.');
     }
 
@@ -70,6 +72,7 @@ class Karyawan extends BaseController
 
     public function delete($id)
     {
+        log_delete('Karyawan', $id);
         $this->karyawanModel->delete($id);
         session()->setFlashdata('success', 'Data karyawan berhasil dihapus.');
         return redirect()->to('/karyawan');

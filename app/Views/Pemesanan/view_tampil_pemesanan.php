@@ -70,7 +70,16 @@
                                         <a href="<?= base_url('pemesanan/batal/' . $row['id']) ?>" class="btn btn-sm btn-danger"
                                            onclick="return confirm('Yakin ingin membatalkan pesanan ini?')">Batal</a>
                                     <?php else : ?>
-                                        <button class="btn btn-sm btn-secondary" disabled>Lunas</button>
+                                        <button class="btn btn-sm btn-success" disabled>Lunas</button>
+                                        <?php if (! empty($row['idberangkat'])) : ?>
+                                            <a href="<?= base_url('pemberangkatan/cetak/' . $row['idberangkat']) ?>" target="_blank" class="btn btn-sm btn-outline-success fw-bold ms-1">
+                                                <i class="fas fa-print"></i> Cetak Surat Jalan
+                                            </a>
+                                        <?php else : ?>
+                                            <a href="<?= base_url('pemberangkatan/input/' . $row['id']) ?>" class="btn btn-sm btn-info text-white ms-1">
+                                                <i class="fas fa-truck-moving"></i> Atur Keberangkatan
+                                            </a>
+                                        <?php endif; ?>
                                     <?php endif; ?>
                                 </div>
                             </td>

@@ -2,10 +2,22 @@
 
 namespace App\Controllers;
 
+use App\Models\PaketBusModel;
+
 class Home extends BaseController
 {
-    public function index(): string
+    protected $paketBusModel;
+
+    public function __construct()
     {
-        return view('welcome_message');
+        $this->paketBusModel = new PaketBusModel();
+    }
+
+    public function index()
+    {
+        // Load paket bus data for the homepage
+        $data['paketbus'] = $this->paketBusModel->getPaketBusWithDetails();
+
+        return view('tampilanawal/index', $data);
     }
 }

@@ -46,9 +46,11 @@ class PaketBus extends BaseController
 
     if ($id) {
         $this->paketBusModel->update($id, $data);
+        log_update('Paket Bus', $id);
         session()->setFlashdata('success', 'Data berhasil diperbarui.');
     } else {
-        $this->paketBusModel->insert($data);
+        $insertId = $this->paketBusModel->insert($data);
+        log_create('Paket Bus', $insertId);
         session()->setFlashdata('success', 'Data berhasil ditambahkan.');
     }
 
@@ -57,6 +59,7 @@ class PaketBus extends BaseController
 
     public function delete($id)
     {
+        log_delete('Paket Bus', $id);
         $this->paketBusModel->delete($id);
         session()->setFlashdata('success', 'Data berhasil dihapus.');
         return redirect()->to('/paketbus');

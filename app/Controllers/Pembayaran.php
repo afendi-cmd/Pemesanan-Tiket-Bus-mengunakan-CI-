@@ -44,9 +44,11 @@ class Pembayaran extends BaseController
 
         if ($id) {
             $this->pembayaranModel->update($id, $data);
+            log_update('Pembayaran', $id);
             session()->setFlashdata('success', 'Data pembayaran berhasil diperbarui.');
         } else {
-            $this->pembayaranModel->insert($data);
+            $insertId = $this->pembayaranModel->insert($data);
+            log_create('Pembayaran', $insertId);
             session()->setFlashdata('success', 'Data pembayaran berhasil ditambahkan.');
         }
 
@@ -55,6 +57,7 @@ class Pembayaran extends BaseController
 
     public function delete($id)
     {
+        log_delete('Pembayaran', $id);
         $this->pembayaranModel->delete($id);
         session()->setFlashdata('success', 'Data pembayaran berhasil dihapus.');
         return redirect()->to('/pembayaran');

@@ -36,10 +36,12 @@ class Jabatan extends BaseController
         if ($id) {
             // Update data
             $this->jabatanModel->update($id, $data);
+            log_update('Jabatan', $id);
             session()->setFlashdata('success', 'Data berhasil diperbarui.');
         } else {
             // Insert data
-            $this->jabatanModel->insert($data);
+            $insertId = $this->jabatanModel->insert($data);
+            log_create('Jabatan', $insertId);
             session()->setFlashdata('success', 'Data berhasil ditambahkan.');
         }
 
@@ -48,6 +50,7 @@ class Jabatan extends BaseController
 
     public function delete($id)
     {
+        log_delete('Jabatan', $id);
         $this->jabatanModel->delete($id);
         session()->setFlashdata('success', 'Data berhasil dihapus.');
         return redirect()->to('/jabatan');

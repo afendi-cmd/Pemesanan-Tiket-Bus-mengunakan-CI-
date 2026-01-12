@@ -35,9 +35,11 @@ class Jenisbus extends BaseController
 
         if ($id) {
             $this->jenisbusModel->update($id, $data);
+            log_update('Jenis Bus', $id);
             session()->setFlashdata('success', 'Data berhasil diperbarui.');
         } else {
-            $this->jenisbusModel->insert($data);
+            $insertId = $this->jenisbusModel->insert($data);
+            log_create('Jenis Bus', $insertId);
             session()->setFlashdata('success', 'Data berhasil ditambahkan.');
         }
 
@@ -46,6 +48,7 @@ class Jenisbus extends BaseController
 
     public function delete($id)
     {
+        log_delete('Jenis Bus', $id);
         $this->jenisbusModel->delete($id);
         session()->setFlashdata('success', 'Data berhasil dihapus.');
         return redirect()->to('/jenisbus');

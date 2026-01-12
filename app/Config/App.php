@@ -16,8 +16,11 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
-    public string $baseURL = 'http://localhost:8080/';
+    // Dari ini:
+public string $baseURL = 'http://localhost:8080/';
 
+// Menjadi ini (sesuai IP Anda):
+//public string $baseURL = 'http://10.161.65.90:8080/';
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
      * If you want to accept multiple Hostnames, set this.

@@ -88,10 +88,15 @@ if ($userSource === 'karyawan') {
             <ul class="list-unstyled pl-8 space-y-1.5 pt-1.5 hidden"> 
                 <li><a href="<?= base_url('laporankaryawan') ?>" class="block py-1.5 px-3 text-sm text-white hover:text-indigo-900 hover:bg-indigo-100 rounded-lg transition duration-150 no-underline"><i class="mdi mdi-account-multiple text-base w-4 mr-3"></i> Laporan Karyawan</a></li>
                 <li><a href="<?= base_url('laporanpemesanan') ?>" class="block py-1.5 px-3 text-sm text-white hover:text-indigo-900 hover:bg-indigo-100 rounded-lg transition duration-150 no-underline"><i class="mdi mdi-cart text-base w-4 mr-3"></i> Laporan Pemesanan</a></li>
-                <li><a href="<?= base_url('laporanpembayaran') ?>" class="block py-1.5 px-3 text-sm text-white hover:text-indigo-900 hover:bg-indigo-100 rounded-lg transition duration-150 no-underline"><i class="mdi mdi-credit-card text-base w-4 mr-3"></i> Laporan Pembayaran</a></li>
+                <li><a href="<?= base_url('laporanpembayaran') ?>" class="block py-1.5 px-3 text-sm text-white hover:text-indigo-900 hover:bg-indigo-100 rounded-lg transition duration-150 no-underline"><i class="mdi mdi-credit-card text-base w-4 mr-3"></i> Laporan Pembayaran Priode</a></li>
                 <li><a href="<?= base_url('laporanpemberangkatan') ?>" class="block py-1.5 px-3 text-sm text-white hover:text-indigo-900 hover:bg-indigo-100 rounded-lg transition duration-150 no-underline"><i class="mdi mdi-truck-delivery text-base w-4 mr-3"></i> Laporan Pemberangkatan</a></li>
+                <li><a href="<?= base_url('laporanpemberangkatanperiode') ?>" class="block py-1.5 px-3 text-sm text-white hover:text-indigo-900 hover:bg-indigo-100 rounded-lg transition duration-150 no-underline"><i class="mdi mdi-calendar-month text-base w-4 mr-3"></i> Laporan Pemberangkatan Per Periode</a></li>
+                <li><a href="<?= base_url('laporanpemberangkatanperiode/perTanggal') ?>" class="block py-1.5 px-3 text-sm text-white hover:text-indigo-900 hover:bg-indigo-100 rounded-lg transition duration-150 no-underline"><i class="mdi mdi-calendar-today text-base w-4 mr-3"></i> Laporan Pemberangkatan Per Tanggal</a></li>
                 <li><a href="<?= base_url('laporanbus') ?>" class="block py-1.5 px-3 text-sm text-white hover:text-indigo-900 hover:bg-indigo-100 rounded-lg transition duration-150 no-underline"><i class="mdi mdi-bus text-base w-4 mr-3"></i> Laporan Bus</a></li>
                 <li><a href="<?= base_url('laporan') ?>" class="block py-1.5 px-3 text-sm text-white hover:text-indigo-900 hover:bg-indigo-100 rounded-lg transition duration-150 no-underline"><i class="mdi mdi-file-chart text-base w-4 mr-3"></i> Laporan Keseluruhan</a></li>
+                <li><a href="<?= base_url('laporan_pembayar') ?>" class="block py-1.5 px-3 text-sm text-white hover:text-indigo-900 hover:bg-indigo-100 rounded-lg transition duration-150 no-underline"><i class="mdi mdi-file-chart text-base w-4 mr-3"></i> Laporan Pembayaran</a></li>
+                <li><a href="<?= base_url('pemberangkatan/laporan') ?>" class="block py-1.5 px-3 text-sm text-white hover:text-indigo-900 hover:bg-indigo-100 rounded-lg transition duration-150 no-underline"><i class="mdi mdi-file-chart text-base w-4 mr-3"></i> Laporan Perjalanan Bus</a></li>
+            </a></li>
             </ul>
         </li>
 
@@ -130,6 +135,8 @@ if ($userSource === 'karyawan') {
                 <li><a href="<?= base_url('laporanpemesanan') ?>" class="block py-1.5 px-3 text-sm text-white hover:text-indigo-900 hover:bg-indigo-100 rounded-lg transition duration-150 no-underline"><i class="mdi mdi-cart text-base w-4 mr-3"></i> Laporan Pemesanan</a></li>
                 <li><a href="<?= base_url('laporanpembayaran') ?>" class="block py-1.5 px-3 text-sm text-white hover:text-indigo-900 hover:bg-indigo-100 rounded-lg transition duration-150 no-underline"><i class="mdi mdi-credit-card text-base w-4 mr-3"></i> Laporan Pembayaran</a></li>
                 <li><a href="<?= base_url('laporanpemberangkatan') ?>" class="block py-1.5 px-3 text-sm text-white hover:text-indigo-900 hover:bg-indigo-100 rounded-lg transition duration-150 no-underline"><i class="mdi mdi-truck-delivery text-base w-4 mr-3"></i> Laporan Pemberangkatan</a></li>
+                <li><a href="<?= base_url('laporanpemberangkatanperiode') ?>" class="block py-1.5 px-3 text-sm text-white hover:text-indigo-900 hover:bg-indigo-100 rounded-lg transition duration-150 no-underline"><i class="mdi mdi-calendar-month text-base w-4 mr-3"></i> Laporan Pemberangkatan Per Periode</a></li>
+                <li><a href="<?= base_url('laporanpemberangkatanperiode/perTanggal') ?>" class="block py-1.5 px-3 text-sm text-white hover:text-indigo-900 hover:bg-indigo-100 rounded-lg transition duration-150 no-underline"><i class="mdi mdi-calendar-today text-base w-4 mr-3"></i> Laporan Pemberangkatan Per Tanggal</a></li>
             </ul>
         </li>
         <li class="text-xs uppercase font-semibold text-gray-400 mt-6 mb-2 px-3">Akun</li>

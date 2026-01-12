@@ -4,17 +4,20 @@ namespace App\Controllers;
 
 use App\Models\BusModel;
 use App\Models\JenisbusModel;
+use App\Libraries\UserLogger;
 use CodeIgniter\Controller;
 
 class Bus extends BaseController
 {
     protected $busModel;
     protected $jenisbusModel;
+    protected $userLogger;
 
     public function __construct()
     {
         $this->busModel = new BusModel();
         $this->jenisbusModel = new JenisbusModel();
+        $this->userLogger = new UserLogger();
     }
 
     public function index()
@@ -32,7 +35,10 @@ class Bus extends BaseController
 
     public function save()
     {
+        helper(['log']); // Load log helper
+        
         $id = $this->request->getPost('id');
+        $userId = session()->get('userId');
 
         $data = [
             'nomor_polisi' => $this->request->getPost('nomor_polisi'),
@@ -43,9 +49,17 @@ class Bus extends BaseController
 
         if ($id) {
             $this->busModel->update($id, $data);
+            
+            // Log update activity using helper
+            log_update('Bus', $id, $userId);
+            
             session()->setFlashdata('success', 'Data bus berhasil diperbarui.');
         } else {
-            $this->busModel->insert($data);
+            $insertId = $this->busModel->insert($data);
+            
+            // Log create activity using helper
+            log_create('Bus', $insertId, $userId);
+            
             session()->setFlashdata('success', 'Data bus berhasil ditambahkan.');
         }
 
@@ -54,6 +68,13 @@ class Bus extends BaseController
 
     public function delete($id)
     {
+        helper(['log']); // Load log helper
+        
+        $userId = session()->get('userId');
+        
+        // Log delete activity using helper
+        log_delete('Bus', $id, $userId);
+        
         $this->busModel->delete($id);
         session()->setFlashdata('success', 'Data bus berhasil dihapus.');
         return redirect()->to('/bus');

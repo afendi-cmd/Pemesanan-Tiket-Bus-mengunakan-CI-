@@ -17,4 +17,14 @@ class KaryawanModel extends Model
                     ->join('jabatan', 'jabatan.id = karyawan.idjabatan', 'left')
                     ->findAll();
     }
+
+    // Ambil karyawan berdasarkan nama jabatan (case-insensitive, menggunakan LIKE)
+    public function getKaryawanByJabatanName($name)
+    {
+        return $this->select('karyawan.*')
+                    ->join('jabatan', 'jabatan.id = karyawan.idjabatan', 'left')
+                    ->like('jabatan.namajabatan', $name)
+                    ->get()
+                    ->getResultArray();
+    }
 }

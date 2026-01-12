@@ -37,9 +37,11 @@ class Paketwisata extends BaseController
       
         if ($id) {
             $this->paketWisataModel->update($id, $data);
+            log_update('Paket Wisata', $id);
             session()->setFlashdata('success', 'Data paket wisata berhasil diperbarui.');
         } else {
-            $this->paketWisataModel->insert($data);
+            $insertId = $this->paketWisataModel->insert($data);
+            log_create('Paket Wisata', $insertId);
             session()->setFlashdata('success', 'Data paket wisata berhasil ditambahkan.');
         }
 
@@ -48,6 +50,7 @@ class Paketwisata extends BaseController
 
     public function delete($id)
     {
+        log_delete('Paket Wisata', $id);
         $this->paketWisataModel->delete($id);
         session()->setFlashdata('success', 'Data paket wisata berhasil dihapus.');
         return redirect()->to('/paketwisata');

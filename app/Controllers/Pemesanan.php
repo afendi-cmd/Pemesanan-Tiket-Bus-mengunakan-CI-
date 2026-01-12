@@ -190,7 +190,76 @@ class Pemesanan extends BaseController
             return redirect()->back()->with('error', 'Transaksi gagal.');
         }
 
+        // Log pemesanan berhasil
+        log_create('Pemesanan', $idPemesanan);
+
         return redirect()->to('/pemesanan/tampil')->with('success', 'Pemesanan Berhasil!');
+    }
+
+    public function bayar($id)
+    {
+        $pemesanan = $this->pemesananModel->getPemesananDetail($id);
+        if (!$pemesanan) {
+            return redirect()->to('/pemesanan/tampil')->with('error', 'Pemesanan tidak ditemukan.');
+        }
+
+        // Ensure view receives an object (view expects property access). Model may return array via getRowArray().
+        if (is_array($pemesanan)) {
+            $pemesanan = (object) $pemesanan;
+        }
+
+        $data['pemesanan'] = $pemesanan;
+        return view('/pemesanan/view_bayar_pemesanan', $data);
+    }
+
+    public function proses_bayar()
+    {
+        $idPemesanan = $this->request->getPost('id_pemesanan');
+        $filefoto = $this->request->getFile('foto_bukti');
+
+        $namabaru = null;
+        if ($filefoto && $filefoto->isValid() && ! $filefoto->hasMoved()) {
+            $namabaru = $filefoto->getRandomName();
+            $filefoto->move(WRITEPATH . 'uploads/bukti_bayar', $namabaru);
+        }
+
+        // Prepare data to insert into pembayaran table (foto not included since table may not have that column)
+        $data = [
+            'tanggal_bayar' => $this->request->getPost('tanggal_bayar') ?? date('Y-m-d'),
+            'jumlah_bayar' => $this->request->getPost('nominal'),
+            'id_pemesanan' => $idPemesanan,
+            'metode_bayar' => $this->request->getPost('metode_bayar')
+        ];
+
+        // If you later add a 'foto' column to the pembayaran table, you can include it as below:
+        // if ($namabaru) $data['foto'] = $namabaru;
+
+        $this->pemesananModel->insertPembayaran($data);
+        
+        // Log pembayaran
+        log_create('Pembayaran', $idPemesanan);
+
+        return redirect()->to('/pemesanan/tampil')->with('success', 'Pembayaran berhasil diunggah dan sedang diproses.');
+    }
+
+    public function laporan()
+    {
+        $tglAwal = $this->request->getGet('tgl_awal');
+        $tglAkhir = $this->request->getGet('tgl_akhir');
+
+        $data['pembayaran']=[];
+        $data['total_pendapatan']=0;
+        $data['tgl_awal'] = $tglAwal;
+        $data['tgl_akhir'] = $tglAkhir;
+
+        if ($tglAwal && $tglAkhir) {
+            $data['pembayaran'] = $this->pemesananModel->getLaporanPembayaran($tglAwal, $tglAkhir);
+
+            foreach ($data['pembayaran'] as $value) {
+                $data['total_pendapatan'] += $value['jumlah_bayar'];
+            }
+        }
+        return view('/pemesanan/view_laporan_pembayaran', $data);
     }
 
     // 4. Menampilkan Tabel Riwayat Pemesanan
@@ -203,6 +272,7 @@ class Pemesanan extends BaseController
 
     public function batal($id)
     {
+        log_delete('Pemesanan', $id);
         if ($this->pemesananModel->hapusPemesanan($id)) {
             return redirect()->to('/pemesanan/tampil')->with('success', 'Pesanan berhasil dibatalkan.');
         } else {

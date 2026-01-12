@@ -43,9 +43,11 @@ public function save()
 
     if ($id) {
         $this->penyewaModel->update($id, $data);
+        log_update('Penyewa', $id);
         session()->setFlashdata('success', 'Data penyewa berhasil diperbarui.');
     } else {
-        $this->penyewaModel->insert($data);
+        $insertId = $this->penyewaModel->insert($data);
+        log_create('Penyewa', $insertId);
         // Tambahkan notifikasi sukses registrasi
         session()->setFlashdata('success_register', 'Selamat! Anda berhasil membuat akun. Silahkan login.');
     }
@@ -57,6 +59,7 @@ public function save()
 
     public function delete($id)
     {
+        log_delete('Penyewa', $id);
         $this->penyewaModel->delete($id);
         session()->setFlashdata('success', 'Data penyewa berhasil dihapus.');
         return redirect()->to('/penyewa');
